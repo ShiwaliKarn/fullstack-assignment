@@ -1,0 +1,18 @@
+{
+  "name": "fullstack-assignment",
+  "version": "1.0.0",
+  "description": "1. **Clone the Repository:**\r    ```bash\r    git clone https://github.com/iAmritMalviya/fullstack-assignment\r    cd fullstack-assignment\r    ```",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "start": "node backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
