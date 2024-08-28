@@ -22,6 +22,7 @@
   outline: none;
   border: 1px solid black;
   box-shadow: 1px 2px 6px #958c8c80;
+  padding-left: 15px;
 }
 .input-arrow {
   position: absolute;

@@ -1,27 +1,34 @@
 import express from "express";
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
+import bodyParser from "body-parser";
+import cors from "cors";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import cardsRouter from "./routes/cards.js";
 
-// dotenv.config();
-
-// mongoose
-//   .connect(process.env.MONGODB_COONECTION_STRING)
-//   .then(() => {
-//     console.log("DB Connected");
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+dotenv.config();
 
 const app = express();
-app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
-const port = process.env.PORT || 3000;
+app.use(cors());
+app.use(bodyParser.json());
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Could not connect to MongoDB:", err));
+
+app.get("/ping", (req, res) => {
+  res.send("Server is running!");
 });
 
-app.get("/", (req, res) => {
-  res.send("Server is running");
+app.use("/api", cardsRouter);
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something went wrong!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
