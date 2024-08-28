@@ -4,6 +4,7 @@ const cardSchema = new mongoose.Schema({
   id: { type: String, required: true, unique: true },
   title: { type: String, required: true },
   description: { type: String, required: true },
+  link: { type: String },
 });
 
 const Card = mongoose.model("Card", cardSchema);

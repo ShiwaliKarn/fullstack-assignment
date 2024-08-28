@@ -9,7 +9,7 @@
 button {
   cursor: pointer;
 }
-link {
+a {
   text-decoration: none;
 }
 .logo {

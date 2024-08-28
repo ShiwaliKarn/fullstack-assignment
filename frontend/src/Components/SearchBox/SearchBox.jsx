@@ -48,12 +48,15 @@ const SearchBox = () => {
           />
         </div>
       </div>
+
       <div className="card-container">
         {filteredCards.map((card) => (
-          <div key={card.id} className="card">
+          // <Link to={`/cards/${encodeURIComponent(card.title)}`} key={card.id}>
+          <div className="card">
             <h4>{card.title}</h4>
             <p>{card.description}</p>
           </div>
+          // </Link>
         ))}
       </div>
     </section>

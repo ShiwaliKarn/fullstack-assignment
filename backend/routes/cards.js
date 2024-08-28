@@ -7,7 +7,9 @@ const router = express.Router();
 router.post("/cards", async (req, res) => {
   const { id, title, description } = req.body;
   try {
-    const newCard = new Card({ id, title, description });
+    // Generate the link dynamically based on the card's title
+    const link = `/cards/${encodeURIComponent(title)}`;
+    const newCard = new Card({ id, title, description, link });
     await newCard.save();
     res.status(201).json(newCard);
   } catch (error) {

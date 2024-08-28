@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 30px;
+  gap: 20px;
 }
 .copyright-div {
   display: flex;

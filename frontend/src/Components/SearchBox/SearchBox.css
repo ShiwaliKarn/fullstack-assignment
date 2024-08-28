@@ -61,4 +61,14 @@
 }
 .card p {
   padding: 5px 12px;
+  color: rgb(71, 69, 69);
+}
+
+@media (max-width: 500px) {
+  .search-input {
+    width: 21rem;
+  }
+  .search-box h1 {
+    font-size: 2rem;
+  }
 }
