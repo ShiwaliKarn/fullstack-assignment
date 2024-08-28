@@ -18,3 +18,5 @@
    - cd fullstack-assignment
    - npm install
    - npm run dev
+
+I have not added env file beacuse so that my project can run easily.
