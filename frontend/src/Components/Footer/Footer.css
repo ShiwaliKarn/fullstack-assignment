@@ -1,0 +1,13 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.copyright-div {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}

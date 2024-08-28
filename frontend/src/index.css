@@ -15,4 +15,8 @@ link {
 .logo {
   filter: brightness(10);
   width: 30px;
+  height: 30px;
+}
+li {
+  list-style: none;
 }
