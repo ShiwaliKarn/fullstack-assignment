@@ -1,0 +1,31 @@
+.search-box {
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  gap: 15px;
+}
+.search-box h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.search-input-div {
+  position: relative;
+}
+
+.search-input {
+  width: 28rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 1px 2px 6px #958c8c80;
+}
+.input-arrow {
+  position: absolute;
+  width: 15px;
+  right: 10px;
+  top: 11px;
+}

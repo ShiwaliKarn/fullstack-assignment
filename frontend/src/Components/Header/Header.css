@@ -1,0 +1,25 @@
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 111px 13px 45px;
+}
+.logo-div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.abstract {
+  font-weight: 450;
+}
+.header-button {
+  background-color: #1a1a1a;
+  border: 1px solid gray;
+  color: white;
+  outline: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+}
