@@ -30,3 +30,35 @@
   right: 10px;
   top: 11px;
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 80px 0px;
+}
+.card {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d1dbe7;
+  border-radius: 12px;
+  background-color: #f4f6f8;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 0px 5px #958c8c45;
+}
+.card h4 {
+  color: #38373a;
+  border-bottom: 1px solid #d1dbe7;
+  padding: 12px;
+}
+.card p {
+  padding: 5px 12px;
+}
