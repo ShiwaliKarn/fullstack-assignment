@@ -18,9 +18,8 @@
 
    - cd fullstack-assignment
    - npm install
+   - add the MONGO_URI in server.js from .env.sample
    - npm run dev
-
-I have not added env file so that my project can run easily.
 
 Answers to the questions:
 

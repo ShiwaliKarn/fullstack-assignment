@@ -14,9 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose
-  .connect(
-    "mongodb+srv://shishiwali:Gb00JXQEL7MhYeyV@cluster0.sq3rw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Could not connect to MongoDB:", err));
 
