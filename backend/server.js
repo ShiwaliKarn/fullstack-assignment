@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import cardsRouter from "./routes/cards.js";
+import cardsRouter from "./routes/cards.route.js";
 
 dotenv.config();
 
@@ -25,11 +25,6 @@ app.get("/ping", (req, res) => {
 });
 
 app.use("/api", cardsRouter);
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Something went wrong!");
-});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

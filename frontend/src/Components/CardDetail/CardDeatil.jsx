@@ -10,7 +10,7 @@ const CardDetail = () => {
     const fetchCard = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/cards/${title}`
+          `http://localhost:3000/api/listings/${title}`
         );
         setCard(response.data);
       } catch (error) {

@@ -1,10 +1,8 @@
-import express from "express";
 import Card from "../models/cardModel.js";
-
-const router = express.Router();
+import { errorHandler } from "../utils/error.js";
 
 // Create a new card
-router.post("/cards", async (req, res) => {
+export const createCards = async (req, res, next) => {
   const { id, title, description } = req.body;
   try {
     // Generate the link dynamically based on the card's title
@@ -13,22 +11,22 @@ router.post("/cards", async (req, res) => {
     await newCard.save();
     res.status(201).json(newCard);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    next(error);
   }
-});
+};
 
 // Get all cards
-router.get("/cards", async (req, res) => {
+export const cardList = async (req, res) => {
   try {
     const cards = await Card.find();
     res.status(200).json(cards);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    next(error);
   }
-});
+};
 
 // Get a specific card by title
-router.get("/cards/:title", async (req, res) => {
+export const cardTitle = async (req, res) => {
   const { title } = req.params;
   try {
     const card = await Card.findOne({ title });
@@ -37,8 +35,6 @@ router.get("/cards/:title", async (req, res) => {
     }
     res.status(200).json(card);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    next(error);
   }
-});
-
-export default router;
+};
