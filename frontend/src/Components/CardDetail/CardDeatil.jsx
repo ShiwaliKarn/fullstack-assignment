@@ -9,9 +9,7 @@ const CardDetail = () => {
   useEffect(() => {
     const fetchCard = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3000/api/listings/${title}`
-        );
+        const response = await axios.get(`http://localhost:3000/api/${title}`);
         setCard(response.data);
       } catch (error) {
         console.error("Error fetching card:", error);

@@ -9,7 +9,6 @@ const App = () => {
   return (
     <Router>
       <Header />
-
       <SearchBox />
       <Routes>
         <Route path="/cards/:title" element={<CardDetail />} />
