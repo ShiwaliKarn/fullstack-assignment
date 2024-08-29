@@ -4,8 +4,9 @@
 
    ```bash
    git clone https://github.com/ShiwaliKarn/fullstack-assignment.git
-   cd fullstack-assignment
    ```
+
+   - cd fullstack-assignment
 
 2. **Frontend:**
 
@@ -49,4 +50,4 @@ Answers to the questions:
 
    - Simplicity in Updating State: The useState hook provides a setter function that can be used to update state in a controlled way, making the state management straightforward even in complex scenarios.
 
-   • Compatibility with Functional Components: Since useState is designed for functional components, it allows the use of React’s modern features like hooks and ensures that the component remains simple and easy to maintain.
+   - Compatibility with Functional Components: Since useState is designed for functional components, it allows the use of React’s modern features like hooks and ensures that the component remains simple and easy to maintain.
